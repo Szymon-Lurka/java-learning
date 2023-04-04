@@ -30,11 +30,9 @@ public class WindowsButton implements Button {
 
     public void onClick() {
         button = new JButton("Exit");
-        button.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                frame.setVisible(false);
-                System.exit(0);
-            }
+        button.addActionListener(e -> {
+            frame.setVisible(false);
+            System.exit(0);
         });
     }
 }
